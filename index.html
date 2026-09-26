@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Great Sakya Monlam Foundation — Sakya Monlam for Universal Peace and Harmony.">
+<title>The Great Sakya Monlam Foundation</title>
+<style>
+:root{
+ --maroon:#651d2b;--maroon-dark:#3b1019;--gold:#c9a04a;--gold-light:#ead59a;
+ --cream:#fbf7ef;--paper:#fffdf8;--ink:#292321;--muted:#746b65;--line:#e7dccb;
+ --shadow:0 14px 40px rgba(55,25,15,.10)
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:85px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.topbar{background:var(--maroon-dark);color:#f8e9be;text-align:center;padding:8px 15px;font:600 13px/1.4 Arial,sans-serif;letter-spacing:.2px}
+.nav{position:sticky;top:0;z-index:1000;background:rgba(255,253,248,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.nav-inner{max-width:1250px;margin:auto;padding:11px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--maroon);font-weight:700}
+.logo{width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:25px;flex:none;background:#fffaf0}
+.brand-text{font-size:17px;line-height:1.2}
+.brand-sub{display:block;font:11px Arial,sans-serif;color:var(--muted);font-weight:500;margin-top:3px}
+.navlinks{display:flex;align-items:center;gap:15px;font:600 12px Arial,sans-serif;text-transform:uppercase}
+.navlinks a{padding:7px 3px}
+.navlinks a:hover{color:var(--gold)}
+.nav-toggle{display:none;border:0;background:none;color:var(--maroon);font-size:27px}
+.hero{min-height:680px;display:grid;place-items:center;text-align:center;color:#fff;background:
+linear-gradient(90deg,rgba(40,9,16,.82),rgba(65,18,27,.42),rgba(40,9,16,.72)),
+url("monlam-photo-1.jpeg") center/cover}
+.hero-inner{max-width:1000px;padding:80px 24px}
+.eyebrow{font:700 12px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:1.05;margin:16px 0}
+.hero p{font-size:20px;max-width:780px;margin:0 auto 25px;color:#fff9ee}
+.hero-date{font-size:25px;color:var(--gold-light);font-weight:700;margin:12px 0}
+.hero-location{font-size:17px}
+.actions{margin-top:27px}
+.btn{display:inline-block;border-radius:4px;padding:12px 21px;margin:5px;font:700 13px Arial,sans-serif;letter-spacing:.2px;cursor:pointer}
+.btn-gold{background:var(--gold);color:#24180d}.btn-outline{border:1px solid #f2db9b;color:white}.btn-maroon{background:var(--maroon);color:#fff}.btn-light{background:#fff;color:var(--maroon)}
+.container{max-width:1200px;margin:auto;padding:82px 24px}
+.section-head{text-align:center;max-width:800px;margin:0 auto 44px}
+.section-head h2{color:var(--maroon);font-size:38px;line-height:1.15;margin:8px 0 13px}
+.section-head p{color:var(--muted);margin:0}
+.kicker{font:700 12px Arial,sans-serif;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+.band{background:#eee0c7;color:var(--maroon);text-align:center;padding:25px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:28px;box-shadow:var(--shadow)}
+.card h3{color:var(--maroon);font-size:22px;margin:5px 0 10px}
+.card p{color:var(--muted);margin:0 0 12px}
+.card .symbol{font-size:31px;color:var(--gold)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about-photo{min-height:470px;border-radius:8px;background:
+linear-gradient(rgba(80,25,28,.15),rgba(80,25,28,.15)),
+url("monlam-photo-2.jpeg") center/cover}
+.checklist{padding:0;list-style:none}.checklist li{margin:12px 0;padding-left:27px;position:relative}.checklist li:before{content:"☸";position:absolute;left:0;color:var(--gold)}
+.event-feature{background:linear-gradient(135deg,var(--maroon),#823441);color:white;border-radius:8px;padding:38px;display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:center;box-shadow:var(--shadow)}
+.event-feature h2{color:var(--gold-light);font-size:34px;margin:5px 0 15px}.event-date{font-size:28px;color:var(--gold-light);font-weight:700}.event-feature p{color:#f9efe0}
+.timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:140px 1fr;gap:20px;border-left:3px solid var(--gold);padding:13px 20px;background:#fffaf1}.timeline-item strong{color:var(--maroon)}
+.resources a,.news a{color:var(--maroon);font-weight:bold}
+.live-box{background:#1e1717;border-radius:8px;min-height:380px;color:white;display:grid;place-items:center;text-align:center;padding:40px}
+.play{width:82px;height:82px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:32px;color:var(--gold);margin:auto}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.gallery-item{height:230px;border-radius:6px;overflow:hidden;position:relative;background-size:cover;background-position:center}
+.gallery-item:nth-child(1){background-image:url("monlam-photo-1.jpeg")}
+.gallery-item:nth-child(2){background-image:url("monlam-photo-2.jpeg")}
+.gallery-item:nth-child(3){background-image:url("https://images.unsplash.com/photo-1545389336-cf090694435e?auto=format&fit=crop&w=900&q=80")}
+.gallery-item:nth-child(4){background-image:url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=900&q=80")}
+.gallery-item:nth-child(5){background-image:url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80")}
+.gallery-item:nth-child(6){background-image:url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80")}
+.gallery-label{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.8));color:white;padding:40px 15px 12px}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.news-date{font:700 11px Arial,sans-serif;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
+.donation{background:linear-gradient(135deg,#571722,#8a3946);color:white;max-width:none}
+.donation .section-head h2{color:var(--gold-light)}.donation .section-head p{color:#f6ebdd}
+.donation-cards{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.donation-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);padding:25px;border-radius:7px}
+.donation-card h3{color:var(--gold-light);margin-top:0}
+.donation-card p{color:#fff4e5}
+.notice{max-width:1100px;margin:28px auto 0;border:1px solid rgba(255,255,255,.2);padding:17px;text-align:center;color:#f9ead6}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.map{min-height:360px;border-radius:8px;background:#eadfcf;display:grid;place-items:center;text-align:center;color:var(--muted);border:1px solid var(--line)}
+.contact-list{list-style:none;padding:0}.contact-list li{padding:12px 0;border-bottom:1px solid var(--line)}
+footer{background:#291317;color:#dfd0c0;padding:55px 24px 22px}.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}.footer-grid h3{color:var(--gold-light)}.footer-grid a{display:block;margin:7px 0;color:#dfd0c0}.copyright{max-width:1200px;margin:35px auto 0;border-top:1px solid #ffffff20;padding-top:17px;text-align:center;font:12px Arial,sans-serif}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:2000;place-items:center;padding:20px}.modal.open{display:grid}.modal-box{background:var(--paper);max-width:600px;width:100%;padding:35px;border-radius:8px;position:relative}.close{position:absolute;right:18px;top:12px;border:0;background:none;font-size:28px;color:var(--maroon)}
+@media(max-width:1000px){.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:#fffdf8;padding:16px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.nav-toggle{display:block}.grid,.news,.donation-cards{grid-template-columns:1fr 1fr}.about,.contact-grid{grid-template-columns:1fr}.about-photo{min-height:350px}.event-feature{grid-template-columns:1fr}}
+@media(max-width:650px){.grid,.grid-2,.news,.donation-cards,.gallery{grid-template-columns:1fr}.hero{min-height:640px}.hero h1{font-size:45px}.container{padding:62px 18px}.section-head h2{font-size:31px}.brand-text{font-size:14px}.brand-sub{font-size:9px}.timeline-item{grid-template-columns:1fr;gap:3px}.gallery-item{height:250px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">35th Sakya Monlam for Universal Peace & Harmony · 25 December 2026 – 3 January 2027 · Bodh Gaya, India</div>
+
+<nav class="nav">
+<div class="nav-inner">
+<a class="brand" href="#home" aria-label="Sakya Monlam Home">
+  <span class="logo">༄</span>
+  <span class="brand-text">The Great Sakya Monlam Foundation<span class="brand-sub">India · Universal Peace & Harmony</span></span>
+</a>
+<button class="nav-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+<div class="navlinks" id="navlinks">
+<a href="#home">Home</a><a href="#about">About</a><a href="#monlam">Monlam</a><a href="#events">Events</a>
+<a href="#prayers">Prayers</a><a href="#live">Live</a><a href="#gallery">Gallery</a><a href="#news">News</a><a href="#donate">Donate</a><a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<header id="home" class="hero">
+<div class="hero-inner">
+<div class="eyebrow">The Great Sakya Monlam Foundation · India</div>
+<h1>Sakya Monlam for Universal Peace & Harmony</h1>
+<div class="hero-date">25 December 2026 – 3 January 2027</div>
+<div class="hero-location">Mahabodhi Temple · Under the Sacred Bodhi Tree · Bodh Gaya, Bihar</div>
+<p>Join the great gathering of prayer, aspiration and dedication for peace, harmony and the benefit of all sentient beings.</p>
+<div class="actions">
+<a class="btn btn-gold" href="#events">Join Us</a>
+<a class="btn btn-outline" href="#donate">Donate</a>
+<a class="btn btn-outline" href="#live">Watch Live</a>
+</div>
+</div>
+</header>
+
+<div class="band">༄ &nbsp; May the merit of all virtuous actions benefit all sentient beings. &nbsp; ༄</div>
+
+<section id="about" class="container">
+<div class="about">
+<div class="about-photo" role="img" aria-label="Buddhist sacred site"></div>
+<div>
+<div class="kicker">About Us</div>
+<h2>The Great Sakya Monlam Foundation</h2>
+<p>The Great Sakya Monlam Foundation is dedicated to supporting Sakya Monlam activities and Buddhist initiatives centred on prayer, compassion, peace, harmony and the welfare of all sentient beings.</p>
+<p>The Foundation brings together members of the Sangha, practitioners, devotees and Dharma friends for sacred prayer assemblies and related activities while supporting the preservation and continuation of the Sakya Buddhist tradition.</p>
+<ul class="checklist">
+<li><strong>Purpose:</strong> facilitate prayer and Dharma activities.</li>
+<li><strong>Vision:</strong> cultivate peace, compassion and harmony.</li>
+<li><strong>Mission:</strong> preserve tradition and support beneficial Buddhist activities.</li>
+<li><strong>Community:</strong> welcome Sangha, practitioners and Dharma friends internationally.</li>
+</ul>
+<a class="btn btn-maroon" href="#contact">Foundation Contact</a>
+</div>
+</div>
+</section>
+
+<section class="container" style="padding-top:20px" id="leadership">
+<div class="section-head"><div class="kicker">Foundation</div><h2>Leadership & Service</h2><p>Official leadership names, biographies and committee information can be published here from the Foundation's approved records.</p></div>
+<div class="grid">
+<div class="card"><div class="symbol">☸</div><h3>Executive Leadership</h3><p>Add the current President, Vice President, General Secretary and other office bearers.</p></div>
+<div class="card"><div class="symbol">༄</div><h3>Monlam Organising Team</h3><p>Add approved organising committee members and their responsibilities.</p></div>
+<div class="card"><div class="symbol">◈</div><h3>Administration</h3><p>Add official office, accounts, communications and volunteer information.</p></div>
+</div>
+</section>
+
+<section id="monlam" class="container">
+<div class="section-head"><div class="kicker">Sakya Monlam</div><h2>A great gathering of aspiration prayers</h2><p>Sakya Monlam is a sacred gathering in which prayers, aspirations and dedications are offered for peace, harmony and the benefit of all beings.</p></div>
+<div class="grid">
+<div class="card"><div class="symbol">☸</div><h3>What is Sakya Monlam?</h3><p>A collective prayer gathering rooted in Buddhist practice, aspiration and dedication.</p></div>
+<div class="card"><div class="symbol">◈</div><h3>History of the Monlam</h3><p>This section can present the Foundation's approved historical account and milestones from previous Monlam gatherings.</p></div>
+<div class="card"><div class="symbol">ॐ</div><h3>Previous Monlams</h3><p>Create an archive of annual Monlams, locations, dates, photographs, videos and major activities.</p></div>
+</div>
+<div class="card" style="margin-top:22px;text-align:center">
+<h3>35th Sakya Monlam</h3><p><strong>25 December 2026 – 3 January 2027</strong><br>Mahabodhi Temple, Bodh Gaya, Bihar, India</p>
+<p>The programme is intended to bring together senior Sakya masters, lamas, tulkus, khenpos, monks, nuns and Dharma friends for ten consecutive days of prayer and dedication.</p>
+<a class="btn btn-maroon" href="#events">Full Event Information</a>
+</div>
+</section>
+
+<section id="events" class="container">
+<div class="section-head"><div class="kicker">Events</div><h2>Upcoming Buddhist Activities</h2><p>Official dates and programme details can be updated here by the Foundation.</p></div>
+<div class="event-feature">
+<div><div class="kicker">Annual Main Event</div><div class="event-date">25 Dec 2026<br>— 3 Jan 2027</div><p>10 consecutive days</p></div>
+<div><h2>35th Sakya Monlam for Universal Peace & Harmony</h2><p><strong>Venue:</strong> Mahabodhi Temple, under the sacred Bodhi Tree, Bodh Gaya, Bihar, India.</p><p>The gathering is guided by H.H. the 41st Sakya Gongma Trichen Rinpoche, with the presence of senior Sakya masters and members of the wider Sakya community.</p><a class="btn btn-gold" href="#contact">Request Event Information</a></div>
+</div>
+<div class="timeline" style="margin-top:25px">
+<div class="timeline-item"><strong>25 Dec 2026</strong><span>Opening day and commencement of the 35th Sakya Monlam.</span></div>
+<div class="timeline-item"><strong>26 Dec – 2 Jan</strong><span>Daily prayer and Monlam programme — detailed schedule to be published.</span></div>
+<div class="timeline-item"><strong>3 Jan 2027</strong><span>Final day, dedication and closing programme.</span></div>
+</div>
+</section>
+
+<section id="prayers" class="container">
+<div class="section-head"><div class="kicker">Practice Resources</div><h2>Prayers & Teachings</h2><p>Download official prayer texts and access Dharma teachings. Replace the sample links with your approved files before publishing.</p></div>
+<div class="grid resources">
+<div class="card"><div class="symbol">📜</div><h3>Prayer Texts</h3><p>Tibetan prayer texts and selected translations.</p><a href="#" onclick="notice('Add your official prayer PDF link here.');return false;">Open Prayer Texts →</a></div>
+<div class="card"><div class="symbol">📖</div><h3>PDF Downloads</h3><p>Brochures, programmes, schedules and participant information.</p><a href="#" onclick="notice('Add your official PDF download links here.');return false;">View Downloads →</a></div>
+<div class="card"><div class="symbol">🎧</div><h3>Dharma Teachings</h3><p>Teachings, talks and recorded Dharma sessions.</p><a href="#live">Watch / Listen →</a></div>
+</div>
+</section>
+
+<section id="live" class="container">
+<div class="section-head"><div class="kicker">Live Broadcast</div><h2>Watch Sakya Monlam Live</h2><p>The live player can be connected to the Foundation's official YouTube or Facebook broadcast.</p></div>
+<div class="live-box">
+<div>
+<div class="play">▶</div>
+<h3>Official Sakya Monlam Livestream</h3>
+<p>Add the official YouTube Live embed or broadcast link here.</p>
+<a class="btn btn-gold" href="#" onclick="notice('Replace this button with your official YouTube Live URL.');return false;">Open YouTube Live</a>
+<a class="btn btn-outline" href="#" onclick="notice('Replace this button with your official Facebook Live URL.');return false;">Facebook Live</a>
+</div>
+</div>
+<div class="card" style="margin-top:22px">
+<h3>Live Schedule</h3>
+<p>Programme schedule will be published before the Monlam. Times can be shown in India Standard Time (IST) and additional time zones.</p>
+</div>
+</section>
+
+<section id="gallery" class="container">
+<div class="section-head"><div class="kicker">Gallery</div><h2>Photos & Videos</h2><p>A visual archive of the Sakya Monlam and related Buddhist activities.</p></div>
+<div class="gallery">
+<div class="gallery-item"><div class="gallery-label">Sakya Monlam · Bodhi Tree</div></div>
+<div class="gallery-item"><div class="gallery-label">Sakya Monlam · Prayer Gathering</div></div>
+<div class="gallery-item"><div class="gallery-label">Dharma Practice</div></div>
+<div class="gallery-item"><div class="gallery-label">Previous Monlam</div></div>
+<div class="gallery-item"><div class="gallery-label">Buddhist Heritage</div></div>
+<div class="gallery-item"><div class="gallery-label">Monlam Highlights</div></div>
+</div>
+<p style="text-align:center;color:var(--muted);margin-top:22px">Replace these sample photographs with the Foundation's own authorised images.</p>
+</section>
+
+<section id="news" class="container">
+<div class="section-head"><div class="kicker">News & Updates</div><h2>Latest Announcements</h2><p>Keep devotees and Dharma friends informed with official Foundation updates.</p></div>
+<div class="news">
+<article class="card"><div class="news-date">Upcoming · 2026</div><h3>35th Sakya Monlam Announcement</h3><p>The 35th Sakya Monlam is scheduled for 25 December 2026 to 3 January 2027 at Mahabodhi Temple, Bodh Gaya.</p><a href="#events">Read event information →</a></article>
+<article class="card"><div class="news-date">Updates</div><h3>Programme & Participation</h3><p>Programme details, participant information and important announcements can be published here.</p><a href="#contact">Contact the Foundation →</a></article>
+<article class="card"><div class="news-date">Foundation</div><h3>Foundation News</h3><p>Publish approved news about Buddhist activities, projects, community service and Foundation initiatives.</p><a href="#about">About the Foundation →</a></article>
+</div>
+</section>
+
+<section id="donate" class="donation">
+<div class="container">
+<div class="section-head"><div class="kicker">Support the Dharma</div><h2>Make an Offering to Sakya Monlam</h2><p>Support the prayer gathering and related activities through the Foundation's approved donation channels.</p></div>
+<div class="donation-cards">
+<div class="donation-card"><h3>🇮🇳 Indian Donation</h3><p>Use the Foundation's approved Indian bank account or online payment method.</p><button class="btn btn-gold" onclick="openDonation('Indian Donation')">View Details</button></div>
+<div class="donation-card"><h3>🌏 International Donation</h3><p>Provide approved international donation instructions for supporters outside India.</p><button class="btn btn-gold" onclick="openDonation('International Donation')">View Details</button></div>
+<div class="donation-card"><h3>🧾 Donation Receipt</h3><p>Explain the receipt process and the information donors should provide.</p><button class="btn btn-gold" onclick="openDonation('Donation Receipt')">Receipt Information</button></div>
+</div>
+<div class="notice"><strong>Important:</strong> Add only the Foundation's verified bank details, payment links and official donation instructions before publishing.</div>
+</div>
+</section>
+
+<section id="contact" class="container">
+<div class="section-head"><div class="kicker">Contact Us</div><h2>The Great Sakya Monlam Foundation</h2><p>Replace the fields below with the Foundation's official published contact information.</p></div>
+<div class="contact-grid">
+<div class="card">
+<h3>Official Contact</h3>
+<ul class="contact-list">
+<li><strong>Address:</strong><br>ADD OFFICIAL FOUNDATION ADDRESS</li>
+<li><strong>Email:</strong><br>ADD OFFICIAL EMAIL ADDRESS</li>
+<li><strong>Phone:</strong><br>ADD OFFICIAL PHONE NUMBER</li>
+<li><strong>Office Hours:</strong><br>ADD OFFICIAL OFFICE HOURS</li>
+</ul>
+<div>
+<a class="btn btn-maroon" href="mailto:ADD-OFFICIAL-EMAIL">Email Foundation</a>
+<a class="btn btn-maroon" href="#" onclick="notice('Replace with your Google Maps location link.');return false;">Google Map</a>
+</div>
+</div>
+<div class="map">
+<div><div style="font-size:45px">📍</div><h3>Foundation Location</h3><p>Add the official Google Maps embed here.<br>No personal address should be published.</p></div>
+</div>
+</div>
+<div class="grid" style="margin-top:24px">
+<div class="card"><h3>Facebook</h3><p>Add the official Foundation page.</p><a href="#" onclick="notice('Add official Facebook URL.');return false;">Open Facebook →</a></div>
+<div class="card"><h3>YouTube</h3><p>Add the official Sakya Monlam channel.</p><a href="#" onclick="notice('Add official YouTube URL.');return false;">Open YouTube →</a></div>
+<div class="card"><h3>Instagram</h3><p>Add the official Foundation account.</p><a href="#" onclick="notice('Add official Instagram URL.');return false;">Open Instagram →</a></div>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+<div><h3>The Great Sakya Monlam Foundation</h3><p>Prayers for universal peace, harmony and the benefit of all sentient beings.</p></div>
+<div><h3>Website</h3><a href="#about">About Us</a><a href="#monlam">Sakya Monlam</a><a href="#events">Events</a><a href="#prayers">Prayers & Teachings</a><a href="#news">News</a></div>
+<div><h3>Support</h3><a href="#live">Live</a><a href="#gallery">Gallery</a><a href="#donate">Donate</a><a href="#contact">Contact</a></div>
+</div>
+<div class="copyright">© 2026 The Great Sakya Monlam Foundation. All rights reserved.</div>
+</footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()">
+<div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div>
+</div>
+
+<script>
+function toggleMenu(){document.getElementById('navlinks').classList.toggle('open')}
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+function notice(msg){document.getElementById('modalContent').innerHTML='<h2 style="color:#651d2b">Website Setup</h2><p>'+msg+'</p><p style="color:#746b65">This Version 1 includes the complete structure; official links and details can be inserted before publication.</p>';document.getElementById('modal').classList.add('open')}
+function openDonation(type){
+let content={
+'Indian Donation':'<h2 style="color:#651d2b">Indian Donation</h2><p>Add the Foundation’s verified Indian bank account, UPI/QR payment option and any required donation instructions here.</p><p><strong>Do not publish unverified account information.</strong></p>',
+'International Donation':'<h2 style="color:#651d2b">International Donation</h2><p>Add the Foundation’s approved international donation method and applicable instructions here.</p><p>For international donations, publish only information verified by the Foundation’s authorised office.</p>',
+'Donation Receipt':'<h2 style="color:#651d2b">Donation Receipt</h2><p>Add the official receipt process, donor information requirements and contact for receipt requests here.</p>'
+}[type];
+document.getElementById('modalContent').innerHTML=content;document.getElementById('modal').classList.add('open')
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()})
+</script>
+</body>
+</html>

@@ -7,3 +7,4 @@ Photo placement:
 - monlam-photo-2.jpeg: About Us image and Gallery image 2
 
 Open index.html in Safari to preview the website.
+(image alt)https://github.com/sakyamonlam/Sakya-Monlam-web/commits/main/logo.pdf
